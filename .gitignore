@@ -1,3 +1,8 @@
+# pour la création des fichier
+
+Donnees_Combinees.csv
+Donnees_Modifiees.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
