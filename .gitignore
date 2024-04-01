@@ -1,8 +1,8 @@
 # pour la création des fichier
 
-/1_Mountain_death
-/2_Mountain_ranges_modified
-/Fichier_fusionne
+CSV/1_Mountain_death
+CSV/2_Mountain_ranges_modified
+Fichier_fusionne
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
