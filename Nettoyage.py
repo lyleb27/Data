@@ -4,7 +4,7 @@ from datetime import datetime
 import dateparser
 
 # Variable
-dossier = "Base"
+dossier = "CSV"
 fichiers_a_inclure = ["annapurna-I.csv", "broad-peak.csv", "cho-oyu.csv", "dhaulagiri-I.csv", "everest.csv", "gasherbrum-I.csv", "gasherbrum-II.csv", "k2.csv", "kangchenjunga.csv", "lhotse.csv", "makalu.csv", "manaslu.csv", "nanga-parbat.csv", "shishapangma.csv"]
 Nom_du_fichier = "1_Mountain_death.csv"
 donnees_totales = []
