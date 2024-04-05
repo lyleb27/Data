@@ -16,8 +16,8 @@ donnees['Nom'] = donnees['Nom'].str.replace(' ', '-')
 donnees.rename(columns=lambda x: x.strip(), inplace=True)
 donnees['Chaîne'] = donnees['Chaîne'].str.replace(' ', '')
 
-donnees['Nom'] = donnees['Nom'].str.lower()  # Mettre tous les noms en minuscules
-donnees['Nom'] = donnees['Nom'].apply(lambda x: x.capitalize())  # Mettre la première lettre en majuscule
+donnees['Nom'] = donnees['Nom'].str.lower()
+donnees['Nom'] = donnees['Nom'].apply(lambda x: x.capitalize())
 
 chemin_fichier_sortie = os.path.join(dossier_base, Nom_du_fichier_1)
 donnees.to_csv(chemin_fichier_sortie, index=False)
@@ -79,13 +79,13 @@ donnees = donnees[colonnes]
 
 # Mettre tous les noms de montagnes en minuscules
 donnees['Montagne'] = donnees['Montagne'].str.lower()
-donnees['Montagne'] = donnees['Montagne'].apply(lambda x: x.capitalize())  # Mettre la première lettre en majuscule
+donnees['Montagne'] = donnees['Montagne'].apply(lambda x: x.capitalize())
 
 # Enregistrer final
 donnees.to_csv(os.path.join(dossier, Nom_du_fichier_2), index=False)
 os.remove(Nom_du_fichier_2)
 
-# Fusion des fichiers
+# Code pour le fichier 3
 Nom_du_fichier_fusionne = "Fichier_fusionne.csv"
 
 f1 = pd.read_csv(os.path.join("CSV", "1_Mountain_death.csv"))
