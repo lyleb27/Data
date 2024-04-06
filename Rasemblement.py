@@ -104,6 +104,9 @@ merged_df.drop('Nom', axis=1, inplace=True)
 
 merged_df = merged_df[['Montagne', 'Altitude (m)', 'Chaîne', 'Pays', 'Date', 'Annee', 'Name', 'Nationality', 'Cause of death']]
 
+# Suppression des lignes où l'année est 1895
+merged_df = merged_df[merged_df['Annee'] != 1895]
+
 chemin_repertoire = os.getcwd()
 chemin_fichier_fusionne = os.path.join(chemin_repertoire, Nom_du_fichier_fusionne)
 merged_df.to_csv(chemin_fichier_fusionne, index=False)
