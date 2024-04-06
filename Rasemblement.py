@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-from datetime import datetime
 import dateparser
 
 # Code pour le fichier 1
@@ -74,14 +73,22 @@ def convertir_date(date_str):
 donnees['Date'] = donnees['Date'].replace({"Summer 1990": "05/07/1990", "Winter 1999": "16/01/1999", "mid July 1982": "15/07/1982", "late June 1975": "28/06/1975", "19 May 1996 or May 1997": "19/05/1997"})
 donnees['Date'] = donnees['Date'].apply(convertir_date)
 
-colonnes = ['Montagne', 'Date', 'Name', 'Nationality', 'Cause of death']
+# Ajout de la colonne 'Annee'
+def extraire_annee(date_str):
+    parsed_date = dateparser.parse(date_str, languages=['en'])
+    if parsed_date:
+        return parsed_date.year
+    else:
+        return None
+
+donnees['Annee'] = donnees['Date'].apply(extraire_annee)
+
+colonnes = ['Montagne', 'Date', 'Name', 'Nationality', 'Cause of death', 'Annee']
 donnees = donnees[colonnes]
 
-# Mettre tous les noms de montagnes en minuscules
 donnees['Montagne'] = donnees['Montagne'].str.lower()
 donnees['Montagne'] = donnees['Montagne'].apply(lambda x: x.capitalize())
 
-# Enregistrer final
 donnees.to_csv(os.path.join(dossier, Nom_du_fichier_2), index=False)
 os.remove(Nom_du_fichier_2)
 
@@ -95,7 +102,7 @@ merged_df = pd.merge(f1, f2, how='left', left_on='Montagne', right_on='Nom')
 
 merged_df.drop('Nom', axis=1, inplace=True)
 
-merged_df = merged_df[['Montagne', 'Altitude (m)', 'Chaîne', 'Pays', 'Date', 'Name', 'Nationality', 'Cause of death']]
+merged_df = merged_df[['Montagne', 'Altitude (m)', 'Chaîne', 'Pays', 'Date', 'Annee', 'Name', 'Nationality', 'Cause of death']]
 
 chemin_repertoire = os.getcwd()
 chemin_fichier_fusionne = os.path.join(chemin_repertoire, Nom_du_fichier_fusionne)
