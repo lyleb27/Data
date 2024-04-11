@@ -7,3 +7,9 @@
 3 - lancé le script Fusion
 
 Vous obtenez un fichier CSV qui et propre.
+Graphique :
+- Camember par cause de mort en pourcentage (déjà fait)
+- Carte
+- Nb de mort par année par montagne
+- Cause de mort par montagne
+- ...
