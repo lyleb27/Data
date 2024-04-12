@@ -1,15 +1,16 @@
 # Data
 
-## Pour avoir les donnée propre
+## Rendu de projet de Data analyse
 
-1 - lancé le script Nettoyage
-2 - lancé le script Liste_Montagne
-3 - lancé le script Fusion
+L'objectif du projet est l'étude d'un jeu de données concernant les cause de décès en montagne, la conformisation des données et la visualisation grâce à Excel.
 
-Vous obtenez un fichier CSV qui et propre.
-Graphique :
-- Camember par cause de mort en pourcentage (déjà fait)
-- Carte
-- Nb de mort par année par montagne
-- Cause de mort par montagne
-- ...
+- Le fichier harmonisation.py qui va regrouper l'ensemble des données, les trier et va rendre ces données utilisables dans un fichier qui sera crée à la racine du projet et qui s'appellera Fichier_fusionne.csv.
+
+- Le fichier camembert.py qui va faire une représentation graphique sous forme d'un camembert de la répartition des causes de décès en pourcentage.
+
+```
+git clone https://github.com/lyleb27/Data.git
+
+python .\Programme.py
+python camembert.py
+```
