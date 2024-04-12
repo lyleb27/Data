@@ -8,9 +8,9 @@ L'objectif du projet est l'étude d'un jeu de données concernant les causes de 
 
 - Le fichier camembert.py qui va faire une représentation graphique sous forme d'un camembert de la répartition des causes de décès en pourcentage.
 
-```
+```shell
 git clone https://github.com/lyleb27/Data.git
 
-python .\Programme.py
+python .\harmonisation.py
 python .\camembert.py
 ```
