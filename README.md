@@ -8,11 +8,11 @@ L'objectif du projet est l'étude d'un jeu de données concernant les causes de 
 
 - Le fichier camembert.py sert à faire une représentation graphique sous forme de camembert représentant la répartition des causes de décès en pourcentage.
 
-- Le fichier carte.py sert à faire une représentation graphique sous forme de carte montrant où se situent les montagnes sur lesquelles nous travaillons.
+- Le fichier carte.py va nous permettre de représenter de manière graphique une carte montrant la localisation des montagnes sur lesquelles nous travaillons.
 
-- Le fichier graphique_barre.py sert à nous montrer le nombre de morts par année par montagne.
+- Le fichier graphique_barre.py va nous permettre de pouvoir afficher le nombre de morts par année par montagne.
 
-Pour pouvoir lancer les fichiers de création de graphiques, il faut d'abord lancer harmonisation.py qui créera le fichier "Fichier_fusionne.csv" nécessaire à la création des graphiques.
+Pour pouvoir lancer les fichiers de création de graphiques, il faut d'abord exécuter harmonisation.py qui créera le fichier "Fichier_fusionne.csv" nécessaire à la création des graphiques.
 
 
 ```shell
