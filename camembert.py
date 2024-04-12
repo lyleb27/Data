@@ -4,10 +4,8 @@ from tkinter import Tk, Text, Scrollbar, mainloop
 
 data = pd.read_csv("Fichier_fusionne.csv")
 
-# Compter les occurrences de chaque cause de décès
 causes_counts = data["Cause of death"].value_counts()
 
-# Calculer le pourcentage total
 total_deces = causes_counts.sum()
 
 # Filtrer les causes avec un pourcentage inférieur à 3%
