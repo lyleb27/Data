@@ -26,4 +26,5 @@ python .\camembert.py
 python .\carte.py
 python .\graphique_barre.py
 python .\mort_montagne.py
+python .\mois.py
 ```
