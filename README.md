@@ -14,6 +14,8 @@ L'objectif du projet est l'étude d'un jeu de données concernant les causes de 
 
 - Le fichier mort_montagne.py nous montre la courbe représentant le nombre de mort total par année en prenant en compte toutes les montagnes.
 
+- Le fichier mois.py nous montre un graphique représentant le nombre de mort de toutes les montagnes par mois.
+
 
 Pour pouvoir lancer les fichiers de création de graphiques, il faut d'abord exécuter harmonisation.py qui créera le fichier "Fichier_fusionne.csv" nécessaire à la création des graphiques.
 
