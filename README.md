@@ -32,6 +32,6 @@ python .\mois.py
 ```
 
 
-Lebourcq Lyse,
-Lanfroid-Nazac Guillaume,
+Lebourcq Lyse, <br>
+Lanfroid-Nazac Guillaume, <br>
 Cassaigne Quentin.
