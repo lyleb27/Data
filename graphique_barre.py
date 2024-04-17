@@ -10,7 +10,6 @@ bins = [data["Annee"].min()] + [year for year in range(data["Annee"].min() + 5, 
 data["Tranche_5_ans"] = pd.cut(data["Annee"], bins=bins)
 deaths_by_mountain_period = data.groupby(["Montagne", "Tranche_5_ans"]).size().unstack(fill_value=0)
 
-# Obtenir une liste des montagnes
 mountains = deaths_by_mountain_period.index
 
 # Créer un graphique pour chaque montagne
@@ -20,7 +19,6 @@ for mountain in mountains:
     # Filtrer les tranches de 5 ans avec au moins un décès
     mountain_data = mountain_data[mountain_data != 0]
     
-    # Tracer le graphique
     if not mountain_data.empty:
         mountain_data.plot(kind='bar')
         plt.title(f"Décès par tranche de 5 ans pour {mountain}")

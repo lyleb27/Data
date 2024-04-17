@@ -13,14 +13,10 @@ autre_seuil = 3
 causes_principales = causes_counts[causes_counts / total_deces * 100 >= autre_seuil]
 causes_autres = causes_counts[causes_counts / total_deces * 100 < autre_seuil]
 
-# Regrouper les causes "Autres"
 autres_sum = causes_autres.sum()
 causes_principales["Autres"] = autres_sum
 
-# Créer le graphique en secteurs (camembert)
 plt.figure(figsize=(20, 12))
-
-# Graphique principal
 plt.subplot(1, 2, 1)
 counts_principaux = causes_principales.tolist()
 causes_principales = causes_principales.index.tolist()
