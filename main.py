@@ -73,7 +73,7 @@ def convertir_date(date_str):
 donnees['Date'] = donnees['Date'].replace({"Summer 1990": "05/07/1990", "Winter 1999": "16/01/1999", "mid July 1982": "15/07/1982", "late June 1975": "28/06/1975", "19 May 1996 or May 1997": "19/05/1997"})
 donnees['Date'] = donnees['Date'].apply(convertir_date)
 
-# Ajout de la colonne 'Annee'
+# Ajout de la colonne 'Année'
 def extraire_annee(date_str):
     parsed_date = dateparser.parse(date_str, languages=['en'])
     if parsed_date:
