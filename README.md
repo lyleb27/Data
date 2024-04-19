@@ -23,7 +23,7 @@ Pour pouvoir lancer les fichiers de cr√©ation de graphiques, il faut d'abord ex√
 ```shell
 git clone https://github.com/lyleb27/Data.git
 
-python .\harmonisation.py
+python .\main.py
 python .\camembert.py
 python .\carte.py
 python .\graphique_barre.py
